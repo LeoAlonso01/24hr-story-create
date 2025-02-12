@@ -19,7 +19,7 @@ const Nav: React.FC = () => {
                     </a>
                 </li>
                 <li style={Styles.navItem}>
-                    <a href="/create" style={Styles.navLink}>
+                    <a href="/add" style={Styles.navLink}>
                         <FaPlusCircle style={Styles.icon} />
                         Add
                     </a>

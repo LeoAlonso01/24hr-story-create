@@ -37,7 +37,7 @@ def get_storys(db: Session = Depends(get_db)):
 
 @app.post("/storys", response_model=StoryResponse)
 def create_story(story: StoryCreate, db: Session = Depends(get_db)):
-    new_story = Story(title=story.title, body=story.body)
+    new_story = Story(title=story.title, body=story.body, src=story.src)
     db.add(new_story)
     db.commit()
     db.refresh(new_story)
